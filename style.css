@@ -1,0 +1,23 @@
+.card{  
+    background-color: beige;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px 5px 5px 5px;
+  width: 20px;
+ margin: 50px 50px 50px 50px;
+flex-wrap: wrap; 
+margin-left: 20px;
+}#board{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+    align-items: center;
+    border: solid black 5px;
+    border-radius: 30px;
+    margin: 30px 30px 30px 30px;
+}body{
+    background-color:darkkhaki;
+}.card:hover{
+    box-shadow: 3px 3px gray;
+    cursor:pointer;
+}
