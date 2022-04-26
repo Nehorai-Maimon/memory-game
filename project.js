@@ -10,7 +10,7 @@ for (let i = numOfCards; i > numOfCards / 2; i--) {
 }
 let cardTaken = [],
   takenBool = false,
-  oneCard;
+  oneCard, counter = 0;
 function createCard(idx) {
   let cardEl = document.createElement("div");
   cardEl.id = idx;
@@ -19,29 +19,30 @@ function createCard(idx) {
     cardEl.innerHTML = cards[idx];
     if (takenBool == false) {
       cardTaken.push(Number(cardEl.innerText));
-      console.log(cardTaken);
       takenBool = true;
       oneCard = cardEl;
     } else {
       cardTaken.push(Number(cardEl.innerText));
-      console.log(cardTaken);
-      setTimeout(()=> {
+      setTimeout(() => {
         if (cardTaken[0] !== cardTaken[1]) {
+          let x = document.getElementById(`lose`);
+          x.play();
           oneCard.innerText = ``;
           cardEl.innerHTML = ``;
           cardTaken = [];
           takenBool = false;
-          // alert(`no match!!🤦‍♂️`);
-          let x = document.getElementById(`lose`)
-          x.play();
         } else if (cardTaken[0] === cardTaken[1]) {
+          let y = document.getElementById(`win`);
+          y.play();
           cardTaken = [];
           takenBool = false;
-          let y = document.getElementById(`win`)
-          y.play();
-          // alert(`match!!🤔`);
+          counter += 2
+          if (counter === 16){
+            let z = document.getElementById(`finish`);
+            z.play();
+          }
         }
-      }, 500)
+      }, 500);
     }
   };
   return cardEl;
@@ -58,3 +59,4 @@ for (i in cards) {
   const element = createCard(i);
   board.appendChild(element);
 }
+
