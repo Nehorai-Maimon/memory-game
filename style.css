@@ -7,12 +7,10 @@
   text-align: center;
 }
 #board {
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap: 10px;
-   grid-template-rows: auto;
-   margin: 50px 100px 50px 200px;
-   
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 10px 10px 10px 10px;
 }
 body {
   background-image: url("board.jpg");
@@ -21,4 +19,28 @@ body {
 .card:hover {
   box-shadow: 3px 3px gray;
   cursor: pointer;
+}#all{
+  display: flex;
+  justify-content: center;
+}#player1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-right: 80px;
+  gap: 30px;
+}.hiddeCard{
+  
+}.winners{
+  background-image: url("card.jpg");
+  border-radius: 3px;
+  width: 80px;
+  height: 96px;
+  font-size: 80px;
+  text-align: center;
+}header{
+  text-align: center;
+}#player2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left:80px;
+  gap: 30px;
 }
