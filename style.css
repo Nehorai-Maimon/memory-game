@@ -1,4 +1,4 @@
-/* .card {
+.card {
   background-image: url("card.jpg");
   border-radius: 3px;
   width: 100px;
@@ -43,4 +43,4 @@ body {
   grid-template-columns: 1fr 1fr;
   padding-left:80px;
   gap: 30px;
-} */
+}
